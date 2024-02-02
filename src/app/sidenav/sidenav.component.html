@@ -1,0 +1,64 @@
+<mat-drawer-container>
+    <mat-drawer mode="side" opened>
+        <mat-nav-list>
+            <mat-list-item class="centered-content">
+              <mat-icon fontIcon="home"></mat-icon>
+              <span class="item-text">Dashboard</span>
+            </mat-list-item>
+            <mat-list-item class="centered-content">
+                <mat-icon>bookmark_border</mat-icon>
+                <span class="item-text">Products</span>
+            </mat-list-item>
+            <mat-list-item class="centered-content">
+                <mat-icon> format_list_bulleted</mat-icon>
+                <span class="item-text">Orders</span>
+            </mat-list-item>
+            <mat-list-item class="centered-content">
+                <mat-icon fontIcon="folder_open"></mat-icon>
+            <span class="item-text">Categories</span>
+            </mat-list-item>
+            <mat-list-item class="centered-content">
+                <mat-icon>people_outline</mat-icon>
+            <span class="item-text">Customers</span>
+            </mat-list-item>
+            <mat-list-item class="centered-content">
+                <mat-icon>signal_cellular_alt</mat-icon>
+            <span class="item-text">Reports</span>
+            </mat-list-item>
+            <mat-list-item class="centered-content">
+                <mat-icon>star_border</mat-icon>
+            <span class="item-text">Coupons</span>
+            </mat-list-item>
+            <mat-list-item class="centered-content">
+                <mat-icon>inbox</mat-icon>
+            <span class="item-text">Inbox</span>
+            </mat-list-item>
+            <p>Other Information</p>
+            <mat-list-item class="centered-content">
+                <mat-icon> sentiment_satisfied_alt</mat-icon>
+            <span class="item-text">Knowledge Base</span>
+            </mat-list-item>
+            <mat-list-item class="centered-content">
+                <mat-icon>update</mat-icon>
+            <span class="item-text">Product Updates</span>
+            </mat-list-item>
+            <p>Settings</p>
+            <mat-list-item class="centered-content">
+                <mat-icon>person_outline</mat-icon>
+            <span class="item-text">Personal Settings</span>
+            </mat-list-item>
+            <mat-list-item class="centered-content">
+                <mat-icon>settings</mat-icon>
+            <span class="item-text">Global Settings</span>
+            </mat-list-item>
+          </mat-nav-list>
+
+    </mat-drawer>
+    <mat-drawer-content>
+        <div class="category-header">
+            <span>Categories</span>
+            <app-button [buttonText]="'+ Add Category'"></app-button>
+        </div>
+        <app-category></app-category>
+    </mat-drawer-content>
+  </mat-drawer-container>

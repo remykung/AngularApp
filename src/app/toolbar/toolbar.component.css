@@ -1,0 +1,29 @@
+.spacer {
+    width:10px;
+}
+
+.flexible-spacer {
+    flex: 1;
+}
+
+
+mat-toolbar {
+    background: #fff;
+ 
+    align-items: center;
+    width: 100%;
+    height: 68px;
+    padding: 10px;
+}
+
+span{
+    color: #5A607F;
+    font-size: 14px;
+}
+
+app-searchbar {
+    margin-left: 100px; 
+}
+
+
+
