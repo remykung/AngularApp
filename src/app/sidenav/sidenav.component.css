@@ -1,9 +1,27 @@
 
 mat-nav-list {
-    width: 250px;
+    width: 55px;
     height: 1168px;
     background: #F5F6FA;
     color:#5A607F;
+}
+
+mat-nav-list:hover {
+    width: 250px;
+}
+
+.active {
+    background-color: #4CAF50; /* Green background for active items */
+    mat-icon {
+        color: white;
+    }
+    span {
+        color:white;
+    }
+  }
+
+mat-list-item {
+    border-radius: 0 20px 20px 0;
 }
   
 .centered-content {
@@ -21,17 +39,12 @@ mat-icon {
     font-size: 14px;
 }
 
-.category-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 24px;
-    color: #131523;
-    margin: 30px;
-    font-weight: 700;
-}
-
 p {
     margin:10px;
+}
+
+.mat-sidenav-content {
+    min-height: 100vh;
+    min-width: 100%;
 }
 

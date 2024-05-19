@@ -1,11 +1,11 @@
-<mat-drawer-container>
-    <mat-drawer mode="side" opened>
+<mat-sidenav-container>
+    <mat-sidenav mode="side" opened>
         <mat-nav-list>
-            <mat-list-item class="centered-content">
+            <mat-list-item class="centered-content" [class.active]="activeItem === 'dashboard'" (click)="setActiveItem('dashboard')">
               <mat-icon fontIcon="home"></mat-icon>
               <span class="item-text">Dashboard</span>
             </mat-list-item>
-            <mat-list-item class="centered-content">
+            <mat-list-item class="centered-content" [class.active]="activeItem === 'products'" (click)="setActiveItem('products')">
                 <mat-icon>bookmark_border</mat-icon>
                 <span class="item-text">Products</span>
             </mat-list-item>
@@ -53,12 +53,14 @@
             </mat-list-item>
           </mat-nav-list>
 
-    </mat-drawer>
-    <mat-drawer-content>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <!--
         <div class="category-header">
             <span>Categories</span>
             <app-button [buttonText]="'+ Add Category'"></app-button>
         </div>
-        <app-category></app-category>
-    </mat-drawer-content>
-  </mat-drawer-container>
+        -->
+        <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
