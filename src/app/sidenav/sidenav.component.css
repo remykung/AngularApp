@@ -1,10 +1,35 @@
 
 mat-nav-list {
+<<<<<<< HEAD
     width: 250px;
+=======
+    width: 55px;
+>>>>>>> master
     height: 1168px;
     background: #F5F6FA;
     color:#5A607F;
 }
+<<<<<<< HEAD
+=======
+
+mat-nav-list:hover {
+    width: 250px;
+}
+
+.active {
+    background-color: #4CAF50; /* Green background for active items */
+    mat-icon {
+        color: white;
+    }
+    span {
+        color:white;
+    }
+  }
+
+mat-list-item {
+    border-radius: 0 20px 20px 0;
+}
+>>>>>>> master
   
 .centered-content {
     width: 100%;
@@ -21,6 +46,7 @@ mat-icon {
     font-size: 14px;
 }
 
+<<<<<<< HEAD
 .category-header {
     display: flex;
     justify-content: space-between;
@@ -31,7 +57,17 @@ mat-icon {
     font-weight: 700;
 }
 
+=======
+>>>>>>> master
 p {
     margin:10px;
 }
 
+<<<<<<< HEAD
+=======
+.mat-sidenav-content {
+    min-height: 100vh;
+    min-width: 100%;
+}
+
+>>>>>>> master
