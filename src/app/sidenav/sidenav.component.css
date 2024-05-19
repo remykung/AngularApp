@@ -1,16 +1,10 @@
 
 mat-nav-list {
-<<<<<<< HEAD
-    width: 250px;
-=======
     width: 55px;
->>>>>>> master
     height: 1168px;
     background: #F5F6FA;
     color:#5A607F;
 }
-<<<<<<< HEAD
-=======
 
 mat-nav-list:hover {
     width: 250px;
@@ -29,7 +23,6 @@ mat-nav-list:hover {
 mat-list-item {
     border-radius: 0 20px 20px 0;
 }
->>>>>>> master
   
 .centered-content {
     width: 100%;
@@ -46,28 +39,12 @@ mat-icon {
     font-size: 14px;
 }
 
-<<<<<<< HEAD
-.category-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-size: 24px;
-    color: #131523;
-    margin: 30px;
-    font-weight: 700;
-}
-
-=======
->>>>>>> master
 p {
     margin:10px;
 }
 
-<<<<<<< HEAD
-=======
 .mat-sidenav-content {
     min-height: 100vh;
     min-width: 100%;
 }
 
->>>>>>> master
