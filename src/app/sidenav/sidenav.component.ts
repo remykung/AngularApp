@@ -1,11 +1,12 @@
-import { Component } from '@angular/core';
-import { MatSidenavModule } from '@angular/material/sidenav';
+import { Component, ViewChild } from '@angular/core';
+import { MatSidenav, MatSidenavModule } from '@angular/material/sidenav';
 import { MatListModule } from '@angular/material/list';
 import { CategoryComponent } from '../category/category.component';
 import { MatIconModule } from '@angular/material/icon';
 import { Router } from '@angular/router';
 import { RouterModule } from '@angular/router';
 import { ProductComponent } from '../product/product.component';
+import { ExpandService } from '../expand.service';
 
 @Component({
   selector: 'app-sidenav',
@@ -22,11 +23,22 @@ export class SidenavComponent {
     'products': '/product',
     'orders': '/orders',
     'categories': '/categories',
-    // Add more routes here
   };
- 
 
-  constructor(private router: Router) {}
+  @ViewChild('sidenav') sidenav!: MatSidenav;
+
+  constructor(private router: Router, private expandService: ExpandService) {
+  }
+
+  ngAfterViewInit() {
+    this.expandService.expandState$.subscribe((isExpanded: boolean) => {
+      if (isExpanded) {
+        this.sidenav.open();
+      } else {
+        this.sidenav.close();
+      }
+    });
+  }
 
   setActiveItem(item: string): void {
     this.activeItem = item;

@@ -1,5 +1,5 @@
 <mat-sidenav-container>
-    <mat-sidenav mode="side" opened>
+    <mat-sidenav #sidenav mode="side" opened>
         <mat-nav-list>
             <mat-list-item class="centered-content" [class.active]="activeItem === 'dashboard'" (click)="setActiveItem('dashboard')">
               <mat-icon fontIcon="home"></mat-icon>
@@ -55,12 +55,6 @@
 
     </mat-sidenav>
     <mat-sidenav-content>
-        <!--
-        <div class="category-header">
-            <span>Categories</span>
-            <app-button [buttonText]="'+ Add Category'"></app-button>
-        </div>
-        -->
         <router-outlet></router-outlet>
     </mat-sidenav-content>
   </mat-sidenav-container>

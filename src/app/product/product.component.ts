@@ -1,6 +1,7 @@
 import { Component, EventEmitter, Output } from '@angular/core';
 import { CategoryComponent } from '../category/category.component';
 import { ButtonComponent } from '../button/button.component';
+import { ExpandService } from '../expand.service';
 
 @Component({
   selector: 'app-product',
@@ -10,9 +11,15 @@ import { ButtonComponent } from '../button/button.component';
   styleUrl: './product.component.css'
 })
 export class ProductComponent {
-  @Output() sidenavToggle = new EventEmitter<void>();
+  buttonText: string = 'Collapse';
 
-  toggleSidenav() {
-    this.sidenavToggle.emit();
+  constructor(private expandService: ExpandService) {
+    this.expandService.expandState$.subscribe((isExpanded: boolean) => {
+      this.buttonText = isExpanded ? 'Expand' : 'Collapse';
+    });
+  }
+
+  toggleExpandState(): void {
+    this.expandService.toggleExpandState();
   }
 }
